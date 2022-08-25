@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "c819356f-0e19-4ab8-be2d-9a1bc2629158",
+		"_postman_id": "e666ad28-0598-4820-bd49-95c55946c387",
 		"name": "nisway_project",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "20360314"
+		"_exporter_id": "19825100"
 	},
 	"item": [
 		{
@@ -19,33 +19,6 @@
 					"port": "5000",
 					"path": [
 						"get_data"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "post_your_data",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n        \"Date\": \"12/24/2022 11:43:21\",\n        \"Age\": \"35-44\",\n        \"Industry\": \"Government\",\n        \"Jobtitle\": \"softwre\",\n        \"Annualsalary\": 75000,\n        \"Currency\": \"USD\",\n        \"Location\": \"Nashville, TN\",\n        \"Experience\": \"11 - 20 years\",\n        \"AdditionalContext\": \"\",\n        \"OtherCurrency\": \"\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:5000/postdata",
-					"host": [
-						"localhost"
-					],
-					"port": "5000",
-					"path": [
-						"postdata"
 					]
 				}
 			},
@@ -71,34 +44,6 @@
 			"response": []
 		},
 		{
-			"name": "put_data",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "      {  \"Date\": \"45/24/2022 11:43:21\",\n        \"Age\": \"35-44\",\n        \"Industry\": \"Government\",\n        \"Jobtitle\": \"software\",\n        \"Annualsalary\": 75000,\n        \"Currency\": \"USD\",\n        \"Location\": \"Nashville, TN\",\n        \"Experience\": \"11 - 20 years\",\n        \"AdditionalContext\": \"\",\n        \"OtherCurrency\": \"\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:5000/putmethod/35-44",
-					"host": [
-						"localhost"
-					],
-					"port": "5000",
-					"path": [
-						"putmethod",
-						"35-44"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "delet_data",
 			"request": {
 				"method": "DELETE",
@@ -112,6 +57,43 @@
 					"path": [
 						"deletemethod",
 						"IT"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sort_data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/sort",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"sort"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_single_record",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/getsinglerecord/3",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"getsinglerecord",
+						"3"
 					]
 				}
 			},

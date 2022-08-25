@@ -1,12 +1,14 @@
 const express=require("express");
-const { get_method, post_method, put_method, deleted, getdata_by_Industry } = require("../controller/get_post");
+const { get_method,deleted, getdata_by_Industry, sort, get_singlerecord } = require("../controller/get_post");
 const router=express.Router();
 
-router.post('/postdata',post_method)
-router.get('/get_data',get_method)
-router.get('/get_by_age/:Industry',getdata_by_Industry)
-router.put("/putmethod/:Age",put_method)
-router.delete('/deletemethod/:Industry',deleted)
+
+router.get('/get_data',get_method)         //its router for get all data
+router.get('/get_by_indutry/:Industry',getdata_by_Industry) //its use for filter one or more filed
+router.get("/getsinglerecord/:user_id",get_singlerecord)
+router.get("/sort",sort)     // you can sort any field use of this route
+router.delete('/deletemethod/:Industry',deleted) //you can delete any record
+
 
 
 module.exports={router}
